@@ -102,6 +102,16 @@ main #tbl-customers td:last-child {
   display: none;
 }
 
+#trash-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/trash.png");
+  background-size: contain;
+}
+#trash-icon:hover {
+  background-image: url("../img/trash-hover.png");
+}
+
 /*===============================================================================
  * Footer
  *===============================================================================*/

@@ -1,4 +1,5 @@
 /*
+/!*
  *             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
  *                     Version 2, December 2004
  *
@@ -12,16 +13,16 @@
  *    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
  *
  *   0. You just DO WHAT THE FUCK YOU WANT TO.
- */
+ *!/
 
-/**
+/!**
  * @author : Ranjith Suranga <suranga@ijse.lk>
  * @since : 11/15/20
- **/
+ **!/
 
-/*===============================================================================
+/!*===============================================================================
  * Global Variables
- *===============================================================================*/
+ *===============================================================================*!/
 
 var txtId;
 var txtName;
@@ -31,9 +32,9 @@ var customers = [];
 var selectedCustomer = null;
 var selectedRow = null;
 
-/*===============================================================================
+/!*===============================================================================
  * Init
- *===============================================================================*/
+ *===============================================================================*!/
 
 init();
 
@@ -46,24 +47,24 @@ function init(){
     txtId.focus();
 }
 
-/*===============================================================================
+/!*===============================================================================
  * Event Handlers and Timers
- *===============================================================================*/
+ *===============================================================================*!/
 
 document.getElementById('btn-save').addEventListener('click',handleSave);
 txtId.addEventListener('input', handleInput)
 txtName.addEventListener('input', handleInput)
 txtAddress.addEventListener('input', handleInput)
 
-/*===============================================================================
+/!*===============================================================================
  * Functions
- *===============================================================================*/
+ *===============================================================================*!/
 
 function handleSave(event){
-    // validate();
+    validate();
 
-    /* Truthy: {}, [], "0", true */
-    /* Falsy: "", 0, 0.0, null, undefined, false */
+    /!* Truthy: {}, [], "0", true *!/
+    /!* Falsy: "", 0, 0.0, null, undefined, false *!/
     if (!selectedCustomer){
         customers.push({
             id: txtId.value,
@@ -150,8 +151,8 @@ function handleInput(event){
 }
 
 function validate(){
-    /* Object Literal {}, Array Literal [], RegExp Literal /expression/ */
-    /* new Object(), new Array(), new RegExp() */
+    /!* Object Literal {}, Array Literal [], RegExp Literal /expression/ *!/
+    /!* new Object(), new Array(), new RegExp() *!/
 
     var regExp = null;
     var validated = true;
@@ -184,3 +185,4 @@ function validate(){
 
     return validated;
 }
+*/

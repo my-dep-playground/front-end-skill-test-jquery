@@ -23,6 +23,9 @@
  * Global Variables
  *===============================================================================*/
 
+var txtId;
+var txtName;
+var txtAddress;
 
 /*===============================================================================
  * Init
@@ -31,6 +34,10 @@
 init();
 
 function init(){
+    txtId = $("#txt-id");
+    txtName = $("#txt-name");
+    txtAddress = $("#txt-address");
+    txtId.focus();
 
 }
 
@@ -38,9 +45,23 @@ function init(){
  * Event Handlers and Timers
  *===============================================================================*/
 
+$("#btn-save").click(function (){
+    $("table tbody").append('<tr>\n' +
+        '                        <td>'+$("#txt-id").val()+'</td>\n' +
+        '                        <td>'+$("#txt-name").val()+'</td>\n' +
+        '                        <td>'+$("#txt-address").val()+'</td>\n' +
+        '                        <td><button type="button">Delete</button></td>\n' +
+        '                    </tr>');
+    showOrHideTFoot();
+    $("tbody button").click(function (){
+        $(this).parents("tr").remove();
+        showOrHideTFoot();
+    })
+});
 
 /*===============================================================================
  * Functions
  *===============================================================================*/
-
-
+function showOrHideTFoot(){
+    $("table tbody tr").length > 0 ? $("table tfoot").addClass("hide") : $("table tfoot").removeClass("hide");
+}

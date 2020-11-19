@@ -65,4 +65,3 @@ $("#btn-save").click(function (){
 function showOrHideTFoot(){
     $("table tbody tr").length > 0 ? $("table tfoot").addClass("hide") : $("table tfoot").removeClass("hide");
 }
-

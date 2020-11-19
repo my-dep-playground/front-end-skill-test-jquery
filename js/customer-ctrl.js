@@ -102,7 +102,9 @@ function validate(){
     var name = $("#txt-name").val();
     var reg = /^[A-Za-z][A-Za-z .]{3,}$/;
     if(!name.text(reg)){
-        alert("hello");
+        txtName.addClass('is-invalid');
+        txtName.select();
+        validated = false;
     }
  /*   if (!txtName.val().text().match(/^[A-Za-z][A-Za-z .]{3,}$/)){
         txtName.addClass('is-invalid');
